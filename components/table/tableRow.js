@@ -15,6 +15,9 @@ const TableRow = ({ props }) => {
             {/* <p className="opacity-50">{props.artiste}</p> */}
           </div>
         </th>
+        <th>
+          {'description'}
+        </th>
         <th className={styles.th}>{'10,000'}</th>
         {/* <th className={styles.th}>{props.plays}</th> */}
         <th className={styles.th}>{'2:43'}</th>

@@ -28,14 +28,14 @@ const useSpotify = (
     console.log('fetching')
 
     const songs = await program.account.musicAccount.all()
-    console.log(songs)
+    console.log(songs) 
     return songs;
   }
 
   const newMusic = async () => {
     const randomkey = anchor.web3.Keypair.generate().publicKey;
 
-    let [music_pda] = await anchor.web3.PublicKey.findProgramAddress(
+    let [music_pda] = await anchor.web3.PublicKey.findProgramAddressSync(
       [utf8.encode('music'), randomkey.toBuffer()],
       program.programId,
     )

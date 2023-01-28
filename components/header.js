@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import { SpotifyContext } from '../context/context'
 import Image from 'next/image'
 import UploadButton from './uploadButton'
+import cover from "../assets/cover.png";
 
 const style = {
   arrowButton: `bg-black mr-2 w-10 h-10 flex items-center justify-center rounded-full bg-opacity-50 cursor-pointer hover:bg-opacity-75`,
@@ -23,12 +24,12 @@ const Header = ({ setShowUploadMusic }) => {
   return (
     <div className={style.header}>
       <div className={style.headerWrapper}>
-        <div className='flex items-center'>
+        <div className="flex items-center">
           <div className={style.arrowButton}>
-            <img alt='' src='assets/chevronLeft.svg' width={20} height={20} />
+            <img alt="" src="assets/chevronLeft.svg" width={20} height={20} />
           </div>
           <div className={style.arrowButton}>
-            <img alt='' src='assets/chevronRight.svg' width={20} height={20} />
+            <img alt="" src="assets/chevronRight.svg" width={20} height={20} />
           </div>
         </div>
 
@@ -37,52 +38,58 @@ const Header = ({ setShowUploadMusic }) => {
 
           <div className={style.profile}>
             <div className={style.profileAvatarContainer}>
-              <img alt='' src='assets/avatar.jpg' className='rounded-full' />
-            </div>
-            <p>Your Name</p>
-          </div>
-        </div>
-      </div>
-
-      <div className={style.playlistTextContent}>
-        <Image
-          alt=''
-          src='https://angartwork.akamaized.net/webp/?id=150949021&size=296'
-          width={220}
-          height={220}
-        />
-
-        <div className='ml-5'>
-          <div>ALBUM</div>
-          <div className={style.title}>Your Album</div>
-          <div className='flex items-center mt-5'>
-            <div className={style.profileAvatarContainer}>
-              <img alt='' src='assets/avatar.jpg' className='rounded-full' />
+              <img alt="" src="assets/avatar.jpg" className="rounded-full" />
             </div>
             <p>
-              <span className='text-bold'>SteamBeats</span> • 2020 • 46 songs, 3
-              hr 20 min
+              {/* {
+                currentSong?.account?.pubKey
+              } */}
             </p>
           </div>
         </div>
       </div>
 
-      <div className={style.controlsContainer}>
-        <div className={style.playButton}>
-          <img alt='' src='assets/play.svg' width={30} height={30} />
-        </div>
-        <div className={style.iconContainer}>
-          <img alt='' src='assets/heart.svg' width={30} height={30} />
-        </div>
-        <div className={style.iconContainer}>
-          <img alt='' src='assets/download.svg' width={30} height={30} />
-        </div>
-        <div className={style.iconContainer}>
-          <img alt='' src='assets/more.svg' width={30} height={30} />
+      <div className={style.playlistTextContent}> 
+        <Image
+          alt=""
+          src={cover}
+          width={200}
+          height={200}
+          className="rounded-md"
+        />
+
+        {/*  değişecekler  */}
+        <div className="ml-10">
+          <div className={style.title}>Blockchain Breakthroughs</div>
+          <p className="text-2xl mt-2">Navigating the Future of Technology</p>
+          <div className="flex items-center mt-5">
+            <div className={style.profileAvatarContainer}>
+              <img alt="" src="assets/avatar.jpg" className="rounded-full" />
+            </div>
+            <p>
+              <span className="text-bold">Kader&Ceyda</span> • 2023 • 6 episodes, 3
+              hr 20 min
+            </p>
+          </div>
         </div>
       </div>
+      <div className={style.controlsContainer}>
+        <div className={style.playButton}>
+          <img alt="" src="assets/play.svg" width={30} height={30} />
+        </div>
+        <div className={style.iconContainer}>
+          <img alt="" src="assets/heart.svg" width={30} height={30} />
+        </div>
+        <div className={style.iconContainer}>
+          <img alt="" src="assets/download.svg" width={30} height={30} />
+        </div>
+        <div className={style.iconContainer}>
+          <img alt="" src="assets/more.svg" width={30} height={30} />
+        </div>
+      </div>
+      
     </div>
-  )
+  );
 }
 
 export default Header

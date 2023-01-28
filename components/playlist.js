@@ -7,22 +7,23 @@ const Playlist = ({songs}) => {
       <table className={styles.table}>
         <tbody className={styles.tableHeader}>
           <tr>
-            <th className='pb-3'>#</th>
-            <th className='pb-3'>TITLE</th>
-            <th className='pb-3'>PLAYS</th>
-            <th className='pb-3'>
-              <img alt='' src='assets/time.svg' />
+            <th className="pb-3">#</th>
+            <th className="pb-3">TITLE</th>
+            <th className="pb-3">DESCRIPTION</th>
+            <th className="pb-3">PLAYS</th>
+            <th className="pb-3">
+              <img alt="" src="assets/time.svg" />
             </th>
           </tr>
         </tbody>
-        <tbody className='mb-6 block'></tbody>
-        
-        {songs.map(song => {
-          return <TableRow key={song.id} props={song.account} />
+        <tbody className="mb-6 block"></tbody>
+
+        {songs.map((song) => {
+          return <TableRow key={song.id} props={song.account} />;
         })}
       </table>
     </div>
-  )
+  );
 }
 
 export default Playlist

@@ -1,37 +1,36 @@
-import Header from '../components/header'
-import Nav from '../components/nav'
-import Playlist from '../components/playlist'
-import PlayerControls from '../components/playerControls'
-import Activity from '../components/activity'
-import { useState, useEffect } from 'react'
-import UploadModal from '../components/UploadModal'
-import useSpotify from '../hooks/useSpotify'
+import Header from "../components/header";
+import Nav from "../components/nav";
+import Playlist from "../components/playlist";
+import PlayerControls from "../components/playerControls";
+import { useState, useEffect } from "react";
+import UploadModal from "../components/UploadModal";
+import useSpotify from "../hooks/useSpotify";
 
 const HomePage = () => {
-  const [showUploadMusic, setShowUploadMusic] = useState(false)
-  const [title, setTitle] = useState('')
-  const [musicUrl, setMusicUrl] = useState('')
+  const [showUploadMusic, setShowUploadMusic] = useState(false);
+  const [title, setTitle] = useState("");
+  const [musicUrl, setMusicUrl] = useState("");
 
   const { newMusic, getSongs } = useSpotify(
     musicUrl,
     title,
     setTitle,
     setMusicUrl,
-    setShowUploadMusic,
-  )
+    setShowUploadMusic
+  );
 
-  const [songs, setSongs] = useState([])
+  const [songs, setSongs] = useState([]);
 
   useEffect(() => {
-    getSongs().then(songs => {
-      setSongs(songs)
-    })
-  }, [])
+    getSongs().then((songs) => {
+      setSongs(songs);
+    });
+  }, []);
 
   return (
-    <div className='flex'>
+    <div className="flex">
       <Nav />
-      <div className='w-full'>
+      <div className="w-full">
         <Header setShowUploadMusic={setShowUploadMusic} />
         <Playlist songs={songs} />
         <PlayerControls songs={songs} />
@@ -46,9 +45,8 @@ const HomePage = () => {
           />
         )}
       </div>
-      <Activity />
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

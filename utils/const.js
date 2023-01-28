@@ -4,7 +4,7 @@ import spotify from './spotify.json'
 export const SOLANA_HOST = clusterApiUrl('devnet')
 
 export const STABLE_POOL_PROGRAM_ID = new PublicKey(
-  '5wSMdEYxSW7iB3rdE7c8yB3bqBUrVtvggjDdY5viyDLk',
+  'FgeLLoNKnpSN76DHRTQrfH2P47JSQBnCxUQgBpZYmru6',
 )
 
 export const STABLE_POOL_IDL = spotify

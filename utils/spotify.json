@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "name": "spotify_spl_program",
+  "name": "mic_drop",
   "instructions": [
     {
       "name": "acceptPayment",
@@ -52,14 +52,14 @@
           "isSigner": false
         },
         {
-          "name": "authority",
-          "isMut": true,
-          "isSigner": true
-        },
-        {
           "name": "systemProgram",
           "isMut": false,
           "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
         },
         {
           "name": "tokenProgram",
@@ -119,6 +119,6 @@
     }
   ],
   "metadata": {
-    "address": "5wSMdEYxSW7iB3rdE7c8yB3bqBUrVtvggjDdY5viyDLk"
+    "address": "FgeLLoNKnpSN76DHRTQrfH2P47JSQBnCxUQgBpZYmru6"
   }
 }
