@@ -7,7 +7,7 @@
 ## LINK: https://micdrop-ceyker.vercel.app/
 
 ## MIND MAP 
-![Mind Map](https://user-images.githubusercontent.com/74090818/215327221-3ff1a71e-a9a9-444d-a847-265df749002c.jpg)
+![Mind Map (1)](https://user-images.githubusercontent.com/74090818/215327756-e4cbc0da-a4ef-4661-9072-552f72a7acb7.jpg)
 
 ## USER INTERFACE
 # 
